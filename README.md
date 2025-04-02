@@ -30,7 +30,7 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 1. Clone o repositório:
 ```bash
 git clone https://github.com/renatocardoso243/product-media-api.git
-cd node-crud-postgres
+cd product-media-api
 ```
 
 2. Instalação das Dependências
@@ -43,6 +43,7 @@ npm install express sequelize pg pg-hstore multer sharp cors body-parser dotenv 
 
 # Dependências de desenvolvimento (opcional)
 npm install nodemon sequelize-cli --save-dev
+```
 
 3. Configure o banco de dados:
 - Crie um banco PostgreSQL
