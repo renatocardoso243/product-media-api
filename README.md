@@ -87,8 +87,10 @@ node-crud-postgres/
 ├── src/
 │   ├── config/       # Configurações
 │   ├── controllers/  # Lógica dos endpoints
+│   ├── migrations/   # Criação de tabelas
 │   ├── models/       # Modelos do banco de dados
 │   ├── routes/       # Definição de rotas
+│   ├── seeders/      # Inserção de dados nas tabelas
 │   ├── uploads/      # Imagens enviadas (gerado automaticamente)
 │   └── server.js     # Ponto de entrada
 ├── .sequelizerc      # Configuração do Sequelize CLI
