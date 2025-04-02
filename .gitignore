@@ -1,6 +1,8 @@
+node_modules/
 /uploads/
 .env
 .env.local
 .env.development
 .env.test
-.env.production
+.env.productionnode_modules/
+.gitignore
