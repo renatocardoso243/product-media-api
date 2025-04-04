@@ -133,7 +133,7 @@ curl -X POST -F "name=Notebook" -F "price=1999.99" -F "image=@/caminho/da/imagem
 curl http://localhost:3000/api/products
 ```
 
-## 📄 Licença
+## Licença
 
 MIT
 
