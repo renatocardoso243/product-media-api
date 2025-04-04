@@ -11,7 +11,7 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 - Validação de dados
 - Tratamento de erros robusto
 
-## 🛠Tecnologias
+## Tecnologias
 
 - **Backend**: Node.js, Express
 - **Banco de Dados**: PostgreSQL, Sequelize (ORM)
