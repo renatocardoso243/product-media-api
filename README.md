@@ -12,24 +12,6 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 - Tratamento de erros robusto
 - Autenticação JWT
 
-## Roadmap
-
-### Prioridade Alta
-
-- [x] Autenticação JWT
-- [ ] Testes automatizados
-- [ ] Configuração de deploy
-
-### Prioridade Média
-
-- [ ] Documentação Swagger avançada
-- [ ] Health check endpoint
-
-### Prioridade Baixa
-
-- [ ] Frontend básico
-- [ ] CI/CD pipeline
-
 ## Tecnologias
 
 - **Backend**: Node.js, Express
@@ -105,6 +87,13 @@ http://localhost:3000/api-docs
 | GET    | /api/products/:id | Obtém um produto específico      |
 | PUT    | /api/products/:id | Atualiza um produto              |
 | DELETE | /api/products/:id | Remove um produto e suas imagens |
+-----------------------------------------------------------------
+| POST   | /api/auth/register | Cria um novo usuário             |
+| POST   | /api/auth/login    | Testa o login do usuário         |
+| GET    | /api/auth/users    | Lista todos os usuários          |
+| GET    | /api/auth/users/:id| Lista um usuário específico      |
+| PUT    | /api/auth/users/:id| Atualiza um usuário              |
+| DELETE | /api/auth/users/:id| Remove um usuário                |
 
 ## Estrutura do Projeto
 
@@ -161,6 +150,24 @@ curl -X POST -F "name=Notebook" -F "price=1999.99" -F "image=@/caminho/da/imagem
 ```bash
 curl http://localhost:3000/api/products
 ```
+
+## Roadmap
+
+### Prioridade Alta
+
+- [x] Autenticação JWT
+- [ ] Testes automatizados
+- [ ] Configuração de deploy
+
+### Prioridade Média
+
+- [ ] Documentação Swagger avançada
+- [ ] Health check endpoint
+
+### Prioridade Baixa
+
+- [ ] Frontend básico
+- [ ] CI/CD pipeline
 
 ## Licença
 
