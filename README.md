@@ -88,13 +88,17 @@ http://localhost:3000/api-docs
 | GET    | /api/products/:id | Obtém um produto específico      |
 | PUT    | /api/products/:id | Atualiza um produto              |
 | DELETE | /api/products/:id | Remove um produto e suas imagens |
------------------------------------------------------------------
+
+### Usuários
+
+| Método | Rota              | Descrição                        |
 | POST   | /api/auth/register | Cria um novo usuário             |
 | POST   | /api/auth/login    | Testa o login do usuário         |
 | GET    | /api/auth/users    | Lista todos os usuários          |
 | GET    | /api/auth/users/:id| Lista um usuário específico      |
 | PUT    | /api/auth/users/:id| Atualiza um usuário              |
 | DELETE | /api/auth/users/:id| Remove um usuário                |
+
 
 ## Estrutura do Projeto
 
