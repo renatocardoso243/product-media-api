@@ -18,6 +18,7 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 - **Banco de Dados**: PostgreSQL, Sequelize (ORM)
 - **Upload de Arquivos**: Multer, Sharp (processamento de imagens)
 - **Documentação**: Swagger UI
+- **Autenticação**: JWT (JSON Web Token)
 - **Outras**: CORS, Body-parser, UUID
 
 ## Pré-requisitos
@@ -41,7 +42,7 @@ Execute o seguinte comando na raiz do projeto:
 
 ```bash
 # Dependências de produção
-npm install express sequelize pg pg-hstore multer sharp cors body-parser dotenv swagger-ui-express swagger-jsdoc uuid
+npm install express sequelize pg pg-hstore multer sharp cors body-parser dotenv swagger-ui-express swagger-jsdoc uuid jsonwebtoken bcryptjs
 
 # Dependências de desenvolvimento (opcional)
 npm install nodemon sequelize-cli --save-dev
