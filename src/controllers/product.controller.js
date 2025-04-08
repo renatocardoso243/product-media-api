@@ -62,7 +62,7 @@ module.exports = {
         
         res.status(201).json({
           success: true,
-          message: "Product created successfully",
+          message: "Produto criado com sucesso!",
           data: product
         });
       } catch (error) {
@@ -71,7 +71,7 @@ module.exports = {
         
         res.status(400).json({
           success: false,
-          message: error.message || "Error creating product"
+          message: error.message || "Erro ao criar produto"
         });
       }
     }
@@ -91,7 +91,7 @@ module.exports = {
     } catch (error) {
       res.status(500).json({
         success: false,
-        message: error.message || "Error retrieving products"
+        message: error.message || "Erro em listar produtos"
       });
     }
   },
@@ -103,7 +103,7 @@ module.exports = {
       if (!product) {
         return res.status(404).json({
           success: false,
-          message: `Product with id ${req.params.id} not found`
+          message: `Produto com id ${req.params.id} não encontrado.`
         });
       }
       
@@ -114,7 +114,7 @@ module.exports = {
     } catch (error) {
       res.status(500).json({
         success: false,
-        message: error.message || `Error retrieving product with id ${req.params.id}`
+        message: error.message || `Erro em encontrar produto com id ${req.params.id}`
       });
     }
   },
@@ -128,7 +128,7 @@ module.exports = {
         if (!product) {
           return res.status(404).json({
             success: false,
-            message: `Product with id ${req.params.id} not found`
+            message: `Produto com id ${req.params.id} não encontrado.`
           });
         }
   
@@ -176,7 +176,7 @@ module.exports = {
           const updatedProduct = await Product.findByPk(req.params.id);
           return res.status(200).json({
             success: true,
-            message: "Product updated successfully",
+            message: "Produto atualizado com sucesso!",
             data: updatedProduct
           });
         }
@@ -190,7 +190,7 @@ module.exports = {
         
         res.status(500).json({
           success: false,
-          message: error.message || `Error updating product with id ${req.params.id}`
+          message: error.message || `Erro em atualizar produto com id ${req.params.id}`
         });
       }
     }
@@ -203,7 +203,7 @@ module.exports = {
       if (!product) {
         return res.status(404).json({
           success: false,
-          message: `Product with id ${req.params.id} not found`
+          message: `Produto com id ${req.params.id} não encontrado.`
         });
       }
       
@@ -231,12 +231,12 @@ module.exports = {
       
       res.status(200).json({
         success: true,
-        message: "Product deleted successfully"
+        message: "Produto deletado com sucesso!"
       });
     } catch (error) {
       res.status(500).json({ 
         success: false,
-        message: error.message || `Error deleting product with id ${req.params.id}`
+        message: error.message || `Erro em deletar produto com id ${req.params.id}`
       });
     }
   }

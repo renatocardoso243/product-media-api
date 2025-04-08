@@ -2,7 +2,7 @@
 
 ### Prioridade Alta
 
-- [ ] Autenticação JWT
+- [x] Autenticação JWT
 - [ ] Testes automatizados
 - [ ] Configuração de deploy
 

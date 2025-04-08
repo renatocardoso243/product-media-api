@@ -6,27 +6,24 @@ const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 const productRoutes = require('./routes/product.routes'); 
-
-
+const authRoutes = require('./routes/auth.routes');
 const db = require(path.join(__dirname, 'models', 'index.js'));
 const app = express();
-
-
 const uploadDir = path.join(process.cwd(), 'uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
+//Swagger
 configureSwagger(app);
 
 // Config
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/images', express.static(uploadDir));
-
-// Routes
 app.use('/api', productRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/images', express.static(uploadDir));
 
 
 // Sync DB
@@ -38,12 +35,12 @@ db.sequelize.sync()
         console.log('Error syncing database: ' + err.message);
     });
 
-    // Route for test
+    // Routas para Testes
     app.get('/', (req, res) => {
         res.json({ message: 'Welcome to the product API' });
     });
 
-    // Error treating 404
+    // Erro 404
     app.use((req, res, next) => {
             res.status(404).send({
             success: false,
@@ -51,7 +48,7 @@ db.sequelize.sync()
         })
     })
 
-    // Treating global error
+    // Erros globais
     app.use((err, req, res, next) => {
         console.error(err.stack);
         res.status(500).send({

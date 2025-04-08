@@ -10,6 +10,25 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 - Documentação Swagger integrada
 - Validação de dados
 - Tratamento de erros robusto
+- Autenticação JWT
+
+## Roadmap
+
+### Prioridade Alta
+
+- [x] Autenticação JWT
+- [ ] Testes automatizados
+- [ ] Configuração de deploy
+
+### Prioridade Média
+
+- [ ] Documentação Swagger avançada
+- [ ] Health check endpoint
+
+### Prioridade Baixa
+
+- [ ] Frontend básico
+- [ ] CI/CD pipeline
 
 ## 🛠️ Tecnologias
 
@@ -28,6 +47,7 @@ API completa para gerenciamento de produtos com upload de imagens, construída c
 ## 🚀 Instalação
 
 1. Clone o repositório:
+
 ```bash
 git clone https://github.com/renatocardoso243/product-media-api.git
 cd product-media-api
@@ -46,15 +66,18 @@ npm install nodemon sequelize-cli --save-dev
 ```
 
 3. Configure o banco de dados:
+
 - Crie um banco PostgreSQL
 - Atualize as credenciais em `src/config/database.js`
 
 4. Execute as migrações:
+
 ```bash
 npx sequelize-cli db:migrate
 ```
 
 5. Inicie o servidor:
+
 ```bash
 npm run dev
 ```
@@ -64,7 +87,9 @@ npm run dev
 A API estará disponível em `http://localhost:3000/api`
 
 ### Documentação Swagger
+
 Acesse a documentação interativa em:
+
 ```
 http://localhost:3000/api-docs
 ```
@@ -72,13 +97,14 @@ http://localhost:3000/api-docs
 ## 📚 Rotas da API
 
 ### Produtos
-| Método | Rota               | Descrição                          |
-|--------|--------------------|-----------------------------------|
-| POST   | /api/products      | Cria um novo produto com imagem    |
-| GET    | /api/products      | Lista todos os produtos            |
-| GET    | /api/products/:id  | Obtém um produto específico        |
-| PUT    | /api/products/:id  | Atualiza um produto                |
-| DELETE | /api/products/:id  | Remove um produto e suas imagens   |
+
+| Método | Rota              | Descrição                        |
+| ------ | ----------------- | -------------------------------- |
+| POST   | /api/products     | Cria um novo produto com imagem  |
+| GET    | /api/products     | Lista todos os produtos          |
+| GET    | /api/products/:id | Obtém um produto específico      |
+| PUT    | /api/products/:id | Atualiza um produto              |
+| DELETE | /api/products/:id | Remove um produto e suas imagens |
 
 ## 📦 Estrutura do Projeto
 
@@ -103,6 +129,7 @@ node-crud-postgres/
 Para enviar imagens, use `multipart/form-data` com o campo `image`.
 
 **Exemplo no Postman:**
+
 - Método: POST ou PUT
 - Body → form-data
 - Adicione campo `image` (tipo File)
@@ -124,11 +151,13 @@ PORT=3000
 ## 🧪 Testando
 
 1. **Criar produto**:
+
 ```bash
 curl -X POST -F "name=Notebook" -F "price=1999.99" -F "image=@/caminho/da/imagem.jpg" http://localhost:3000/api/products
 ```
 
 2. **Listar produtos**:
+
 ```bash
 curl http://localhost:3000/api/products
 ```
