@@ -91,7 +91,8 @@ http://localhost:3000/api-docs
 
 ### Usuários
 
-| Método | Rota              | Descrição                        |
+| Método | Rota               | Descrição                        |
+| ------ | ------------------ | -------------------------------- |
 | POST   | /api/auth/register | Cria um novo usuário             |
 | POST   | /api/auth/login    | Testa o login do usuário         |
 | GET    | /api/auth/users    | Lista todos os usuários          |
